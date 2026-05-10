@@ -6,7 +6,6 @@ public class SneakerColor
     public int SneakerId { get; set; }
     public int ColorId { get; set; }
     
-    // Навігаційні властивості
     public Sneaker Sneaker { get; set; } = null!;
     public Color Color { get; set; } = null!;
 }

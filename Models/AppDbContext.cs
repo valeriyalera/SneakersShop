@@ -16,16 +16,12 @@ public class AppDbContext : DbContext
 public DbSet<Size> Sizes { get; set; } 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Налаштування зв'язків
-
-        // Sneaker -> Brand (багато до одного)
         modelBuilder.Entity<Sneaker>()
             .HasOne(s => s.Brand)
             .WithMany(b => b.Sneakers)
             .HasForeignKey(s => s.BrandId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // Sneaker -> Category
         modelBuilder.Entity<Sneaker>()
             .HasOne(s => s.Category)
             .WithMany(c => c.Sneakers)
@@ -38,8 +34,6 @@ public DbSet<Size> Sizes { get; set; }
             .HasForeignKey(s => s.SizeId)
             .OnDelete(DeleteBehavior.Cascade);
 
-
-        // Зв'язок багато-до-багатьох через SneakerColor
         modelBuilder.Entity<SneakerColor>()
             .HasOne(sc => sc.Sneaker)
             .WithMany(s => s.SneakerColors)

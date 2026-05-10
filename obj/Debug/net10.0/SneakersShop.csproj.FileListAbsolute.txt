@@ -105,3 +105,4 @@
 /Users/valeriapotehina/SneakersShop/obj/Debug/net10.0/SneakersShop.pdb
 /Users/valeriapotehina/SneakersShop/obj/Debug/net10.0/SneakersShop.genruntimeconfig.cache
 /Users/valeriapotehina/SneakersShop/obj/Debug/net10.0/ref/SneakersShop.dll
+/Users/valeriapotehina/SneakersShop/obj/Debug/net10.0/SneakersShop.sourcelink.json

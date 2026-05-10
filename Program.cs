@@ -3,7 +3,6 @@ using SneakersShop.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Зміни UseSqlite на UseNpgsql
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -14,6 +13,6 @@ var app = builder.Build();
 app.UseRouting();
 app.MapControllers();
 
-app.MapGet("/", () => "Hello World! Sneakers API with PostgreSQL");
+app.MapGet("/", () => "Hello World! Sneakers API is running.");
 
 app.Run();
